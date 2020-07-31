@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'edu.pucmm.eict'
+version '1.0-SNAPSHOT'
+
+mainClassName='edu.pucmm.eict.Main'
+
+repositories {
+    mavenCentral()
+}
+
+run{
+    standardInput = System.in
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'io.javalin:javalin:3.8.0'
+    compile "com.fasterxml.jackson.core:jackson-databind:2.10.1"
+    compile "org.freemarker:freemarker:2.3.30"
+    compile 'com.konghq:unirest-java:3.7.04'
+}
